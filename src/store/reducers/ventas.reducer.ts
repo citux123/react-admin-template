@@ -1,5 +1,5 @@
 import { IVentasDiaState, IActionBase } from "../models/root.interface";
-import { ADD_ORDER } from "../actions/orders.actions";
+import { ADD_VENTA, ADD_VENTA_MES } from "../actions/ventas.actions";
 
 
 const initialState: IVentasDiaState = {
@@ -36,16 +36,27 @@ const initialState: IVentasDiaState = {
         }
     ],
     ventasMes: [
-        
+        {
+            id: 1,
+            "acumulado": 10,
+            meta: 20,
+            "alcance": 30,
+            margen: 5,
+        }
     ]
 };
 
 function ventasReducer(state: IVentasDiaState = initialState, action: IActionBase): IVentasDiaState {
     switch (action.type) {
-        case ADD_ORDER: {
+        case ADD_VENTA: {
             let maxId: number = Math.max.apply(Math, state.ventas.map((o) => { return o.id; }));
             if(maxId === -Infinity) { maxId = 0; }
             return {...state, ventas: [...state.ventas, {...action.ventas, id: maxId + 1}]};
+        }
+        case ADD_VENTA_MES: {
+            let maxId: number = Math.max.apply(Math, state.ventasMes.map((o) => { return o.id; }));
+            if(maxId === -Infinity) { maxId = 0; }
+            return {...state, ventasMes: [...state.ventasMes, {...action.ventasMes, id: maxId + 1}]};
         }
         default:
             return state;

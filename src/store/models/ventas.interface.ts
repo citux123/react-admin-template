@@ -12,7 +12,7 @@ export interface IVentas {
 
 export interface IVentasMes {
     id: number,
-    "acumulado": string,
+    "acumulado": number,
     meta: number,
     "alcance": number,
     margen: number,
