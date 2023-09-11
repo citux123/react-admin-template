@@ -7,6 +7,7 @@ import Products from "../Products/Products";
 import Orders from "../Orders/Orders";
 import Home from "../Home/Home";
 import Notifications from "../../common/components/Notification";
+import Reportes from "../Reportes/Reportes";
 
 const Admin: React.FC = () => {
 
@@ -22,6 +23,7 @@ const Admin: React.FC = () => {
               <Route path={`/users`}><Users /></Route>
               <Route path={`/products`}><Products /></Route>
               <Route path={`/orders`}><Orders /></Route>
+              <Route path={`/reportes`}><Reportes /></Route>
               <Route path="/"><Home /></Route>
             </Switch>
           </div>

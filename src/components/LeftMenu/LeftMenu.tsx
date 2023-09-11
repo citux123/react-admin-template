@@ -28,7 +28,7 @@ const LeftMenu: React.FC = () => {
                     <div className="sidebar-brand-icon icon-green rotate-n-15">
                         <i className="fas fa-bolt"></i>
                     </div>
-                    <div className="sidebar-brand-text mx-3">REACT <sup>Admin</sup></div>
+                    <div className="sidebar-brand-text mx-3">NEXUCO <sup>APP</sup></div>
                 </a>
 
                 <hr className="sidebar-divider my-0" />
@@ -57,6 +57,12 @@ const LeftMenu: React.FC = () => {
                     <Link className="nav-link" to={`/orders`}>
                         <i className="fas fa-fw fa-dollar-sign"></i>
                         <span>Orders</span>
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to={`/reportes`}>
+                        <i className="fas fa-fw fa-book"></i>
+                        <span>Reportes</span>
                     </Link>
                 </li>
 
