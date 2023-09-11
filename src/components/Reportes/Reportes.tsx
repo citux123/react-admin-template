@@ -9,6 +9,7 @@ import ProductList from "../Products/ProductsList";
 import { IProduct } from "../../store/models/product.interface";
 import { changeSelectedProduct, clearSelectedProduct } from "../../store/actions/products.action";
 import { IStateType } from "../../store/models/root.interface";
+import ReporteVenta from "./ReporteVenta"
 
 const Reportes: React.FC = () => {
     const dispatch: Dispatch<any> = useDispatch();
@@ -61,6 +62,36 @@ const Reportes: React.FC = () => {
                         />
                     </div>
                 </div>
+            </div>
+
+            <div className="row">
+                <div className="col-xl-6 col-lg-6">
+                    <div className="card shadow mb-4">
+                        <div className="card-header py-3">
+                            <h6 className="m-0 font-weight-bold text-green">Venta Diaria</h6>
+                            <div className="header-buttons">
+                            </div>
+                        </div>
+                        <div className="card-body">
+                            <ReporteVenta />
+                        </div>
+                    </div>
+                </div>
+                <div className="col-xl-6 col-lg-6">
+                    <div className="card shadow mb-4">
+                        <div className="card-header py-3">
+                            <h6 className="m-0 font-weight-bold text-green">Venta Diaria</h6>
+                            <div className="header-buttons">
+                            </div>
+                        </div>
+                        <div className="card-body">
+                            <ReporteVenta />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="row">
+                
             </div>
         </Fragment>
     )

@@ -3,6 +3,7 @@ import { INotification } from "./notification.interface";
 import { IUser } from "./user.interface";
 import { IOrder } from "./order.interface";
 import { IAccount } from "./account.interface";
+import { IVentas, IVentasMes } from "./ventas.interface"
 
 export interface IRootPageStateType {
     area: string;
@@ -19,6 +20,7 @@ export interface IStateType {
     users: IUserState;
     orders: IOrdersState;
     account: IAccount;
+    ventas: IVentasDiaState;
 }
 
 export interface IProductState {
@@ -43,4 +45,9 @@ export interface INotificationState {
 export interface IUserState {
     users: IUser[];
     admins: IUser[];
+}
+
+export interface IVentasDiaState {
+    ventas: IVentas[];
+    ventasMes: IVentasMes[];
 }
