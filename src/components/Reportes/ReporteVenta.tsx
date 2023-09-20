@@ -1,9 +1,9 @@
 import React, { } from "react";
 import { useSelector } from "react-redux";
-import { IStateType, IVentasDiaState } from "../../store/models/root.interface";
+import { IStateType } from "../../store/models/root.interface";
 import { IVentas } from "../../store/models/ventas.interface";
 
-const ReporteVenta: React.FC = () => {
+const ReporteVenta: React.FC = (head, list) => {
     const ventas: IVentas[] = useSelector((state: IStateType) => state.ventas.ventas);
 
     const orderList: JSX.Element[] = ventas.map(venta => {

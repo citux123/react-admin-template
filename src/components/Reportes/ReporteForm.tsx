@@ -98,14 +98,32 @@ const OrderForm: React.FC = () => {
                             <div className="form-group col-md-12">
                                 <TextInput id="input_name"
                                     value={formState.name.value}
+                                    type="date"
+                                    field="name"
+                                    onChange={hasFormValueChanged}
+                                    required={true}
+                                    maxLength={20}
+                                    label="Fecha inicial"
+                                    placeholder="Name" />
+                                {/* <TextInput id="input_name"
+                                    value={formState.name.value}
                                     field="name"
                                     onChange={hasFormValueChanged}
                                     required={true}
                                     maxLength={20}
                                     label="Name"
+                                    placeholder="Name" /> */}
+                                <TextInput id="input_name"
+                                    value={formState.name.value}
+                                    type="date"
+                                    field="name"
+                                    onChange={hasFormValueChanged}
+                                    required={true}
+                                    maxLength={20}
+                                    label="Fecha final"
                                     placeholder="Name" />
                             </div>
-                            <div className="form-group col-md-6">
+                         {/*    <div className="form-group col-md-6">
                                 <NumberInput id="input_amount"
                                     value={formState.amount.value}
                                     field="amount"
@@ -124,6 +142,16 @@ const OrderForm: React.FC = () => {
                                     min={0}
                                     label="Price" />
                             </div>
+
+                            <div className="form-group col-md-6">
+                                <NumberInput id="input_totalPrice"
+                                    value={formState.totalPrice.value}
+                                    field="totalPrice"
+                                    onChange={hasFormValueChanged}
+                                    max={1000}
+                                    min={0}
+                                    label="Price" />
+                            </div> */}
                         </div>
                         <button className="btn btn-danger" onClick={() => resetForm()}>Reset</button>
                         <button type="submit" className={`btn btn-success left-margin ${getDisabledClass()}`}>Create</button>
